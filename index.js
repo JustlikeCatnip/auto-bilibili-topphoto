@@ -84,7 +84,7 @@ async function painting() {
 
     //设置文字颜色和字号，字体
     ctx.fillStyle = "#e6433a";
-    ctx.font = '40px hanzi';
+    ctx.font = '50px hanzi';
 
     //获得鸽的天数
     let days = await getLastPubDistance();
@@ -92,7 +92,7 @@ async function painting() {
 
     //计算文字尺寸
     let size = ctx.measureText(days_);
-    const txt_x = 420;
+    const txt_x = 600;
     const txt_y = 80;
 
     //转换后续的transform的基点
@@ -109,7 +109,7 @@ async function painting() {
     ctx.transform(1, -0.3, 0, 1, 0, 0);
 
     //将文字绘制到指定坐标
-    ctx.fillText(days, -size.width / 2, 0);
+    ctx.fillText(days_, -size.width / 2, 0);
 
     //canvas转base64编码后上传
     const base64 = encodeURIComponent(canvas.toDataURL("image/png").substring(22));
