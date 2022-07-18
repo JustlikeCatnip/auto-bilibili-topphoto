@@ -84,11 +84,11 @@ async function painting() {
 
     //设置文字颜色和字号，字体
     ctx.fillStyle = "#e6433a";
-    ctx.font = '50px hanzi';
+    ctx.font = '10px hanzi';
 
     //获得鸽的天数
     let days = await getLastPubDistance();
-    let days_ = "距离溢哥上次投稿：" + days
+    let days_ = "距离溢哥上次投稿：" + days + "天"
 
     //计算文字尺寸
     let size = ctx.measureText(days_);
