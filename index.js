@@ -88,10 +88,9 @@ async function painting() {
 
     //获得鸽的天数
     let days = await getLastPubDistance();
-    let days_ = "距离溢哥上次投稿" + days
 
     //计算文字尺寸
-    let size = ctx.measureText(days_);
+    let size = ctx.measureText(days);
     const txt_x = 420;
     const txt_y = 200;
 
